@@ -14,6 +14,7 @@ namespace PoGo.Web.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult LoadMap(string name)
         {
             //return View("MapInIframe", map);

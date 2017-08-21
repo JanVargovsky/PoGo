@@ -1,8 +1,8 @@
 ﻿$(function () {
-    $('[data-toggle="tooltip"]').tooltip()
+    $('[data-toggle="tooltip"]').tooltip();
 
     setTimeout(() => {
-        if (typeof window.google_jobrunner === 'undefined')
-            $("#adblockAlert").removeAttr("hidden")
-    }, 2000)
-})
+        if (typeof window.qs === 'undefined')
+            $("#adblockAlert").removeAttr("hidden");
+    }, 2000);
+});
