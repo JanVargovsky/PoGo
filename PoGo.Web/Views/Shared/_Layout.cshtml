@@ -41,28 +41,36 @@
 
     <script async src="//d2z9iq901qkqk8.cloudfront.net/cz.js"></script>
     @*<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-        (adsbygoogle = window.adsbygoogle || []).push({
-            google_ad_client: "ca-pub-1331033598730782",
-            enable_page_level_ads: true
-        });
-    </script>*@
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({
+                google_ad_client: "ca-pub-1331033598730782",
+                enable_page_level_ads: true
+            });
+        </script>*@
 </head>
 <body>
     @Html.Partial("Navigation")
     <main class="container body-content">
-        <div class="ads ads-top text-center">
-            <script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=852482&format=468x60&ga=g"></script>
-            <script type="text/javascript" src="http://ylx-4.com/layer.php?section=General&pub=852482&ga=g&show=1&fp%22%3E"></script>
-        </div>
+        @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
+        {
+            <div class="ads ads-top text-center">
+                <script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=852482&format=468x60&ga=g"></script>
+                <script type="text/javascript" src="//ylx-4.com/layer.php?section=General&pub=852482&ga=g&show=1&fp%22%3E"></script>
+            </div>
+        }
         <div class="alert alert-danger" role="alert" id="adblockAlert" hidden>
             Tento projekt žije díky příjmu z reklamy. Prosím, podpořte tento web a vypněte si Adblock.
         </div>
+
         @RenderBody()
-        <div class="ads text-center">
-            <script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=852482&format=468x60&ga=g"></script>
-            <script type="text/javascript" src="http://ylx-4.com/layer.php?section=General&pub=852482&ga=g&show=1&fp%22%3E"></script>
-        </div>
+
+        @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
+        {
+            <div class="ads text-center">
+                <script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=852482&format=468x60&ga=g"></script>
+                <script type="text/javascript" src="//ylx-4.com/layer.php?section=General&pub=852482&ga=g&show=1&fp%22%3E"></script>
+            </div>
+        }
     </main>
     @Html.Partial("Footer")
 

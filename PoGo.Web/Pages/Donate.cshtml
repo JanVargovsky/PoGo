@@ -1,5 +1,19 @@
 ﻿@page
 @model DonateModel
+@{
+    ViewData["Title"] = "Podpořte web";
+    ViewBag.HideAds = true;
+}
+
+<div class="card text-white bg-success mb-3">
+    <div class="card-body">
+        <p class="card-text">
+            Web můžete podpořit pomocí platby na PayPal pomocí tlačítka níže nebo zasláním jakékoliv částky na bankovní účet.
+            Prosím, uveďte do popisu pro příjemce město nebo část města, ke kterému se příspěvek vztahuje.
+            Moc děkuji za vaši podporu.
+        </p>
+    </div>
+</div>
 
 <p>
     <a href="https://www.paypal.me/nagaspogo" target="_blank" role="link">
