@@ -43,6 +43,8 @@ namespace PoGo.Web
             services.AddSingleton<FAQFeed>();
             services.AddSingleton<MapFeed>();
             services.AddSingleton<LinkShareFeed>();
+            services.AddSingleton<DiscordFeed>();
+            services.AddSingleton<AdsFeed>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
