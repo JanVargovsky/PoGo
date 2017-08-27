@@ -11,17 +11,17 @@
   },
   {
     "City": "Frýdek - Místek",
-    "URL": "http://nagas.cz:60003",
+    "URL": "https://fm.nagas.cz/",
     "Image": "/images/maps/fm2.png"
   },
   {
     "City": "Frýdlant nad Ostravicí",
-    "URL": "http://nagas.cz:60005",
+    "URL": "https://fno.nagas.cz/",
     "Image": "/images/maps/fno2.png"
   },
   {
     "City": "Mladá Boleslav",
-    "URL": "http://nagas.cz:60004",
+    "URL": "https://mb.nagas.cz/",
     "Image": "/images/maps/mb.png"
   }
 ]

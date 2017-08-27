@@ -22,8 +22,6 @@
     <meta name="twitter:site" content="Nagas.cz" />
     <meta name="twitter:creator" content="@@janvargovsky" />
 
-    <meta name="propeller" content="ee72e21e5c4f27afa9370d0bb068b91c" />
-
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/StyleSheet.css" />
@@ -53,8 +51,9 @@
     <main class="container body-content">
         @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
         {
-            <div class="ads ads-top text-center">
+            <div class="ads ads-top text-center mb-1">
                 <script type="text/javascript" data-ad-type="pixel v1.0" charset="utf-8" src="//cz.search.etargetnet.com/generic/uni.php?g=ref:48725"></script>
+                <script type="text/javascript" id="etargetScript597650454f6309afd022ff7765534fa6">function etargetPostloadFunction597650454f6309afd022ff7765534fa6() { var e = "etargetPostload597650454f6309afd022ff7765534fa6", t = "etargetScript597650454f6309afd022ff7765534fa6", o = document.getElementById(e); if (o) { for (var n = o.offsetTop, d = o.offsetLeft, r = o.offsetWidth, a = o.offsetHeight; o.offsetParent;)o = o.offsetParent, n += o.offsetTop, d += o.offsetLeft; var i = n < window.pageYOffset + window.innerHeight && d < window.pageXOffset + window.innerWidth && n + a > window.pageYOffset && d + r > window.pageXOffset; if (i && etargetAllowOtherCheck) { allowed = !1; var c = document.createElement("script"); return c.src = "//cz.search.etargetnet.com/generic/uni.php?g=ref:48735,area:468x60", void (document.getElementById(t) && document.getElementById(e) && (document.getElementById(t).parentNode.appendChild(c), document.getElementById(t).parentNode.removeChild(document.getElementById(t)), document.getElementById(e).parentNode.removeChild(document.getElementById(e)), document.removeEventListener("scroll", etargetPostloadFunction597650454f6309afd022ff7765534fa6), document.removeEventListener("resize", etargetPostloadFunction597650454f6309afd022ff7765534fa6), document.removeEventListener("DOMContentLoaded", etargetPostloadFunction597650454f6309afd022ff7765534fa6))) } } } var etargetDivID = "etargetPostload597650454f6309afd022ff7765534fa6", etargetScriptID = "etargetScript597650454f6309afd022ff7765534fa6", etargetPostloadPoint = document.createElement("div"); etargetPostloadPoint.id = etargetDivID; var etargetCurScript = document.getElementById(etargetScriptID); etargetCurScript.parentNode.appendChild(etargetPostloadPoint), document.addEventListener("scroll", etargetPostloadFunction597650454f6309afd022ff7765534fa6), document.addEventListener("resize", etargetPostloadFunction597650454f6309afd022ff7765534fa6), document.addEventListener("DOMContentLoaded", etargetPostloadFunction597650454f6309afd022ff7765534fa6); var etargetAllowOtherCheck = !0; if (typeof ("forceRunPostload") == "string") { etargetPostloadFunction597650454f6309afd022ff7765534fa6() }</script>
             </div>
         }
         <div class="alert alert-danger" role="alert" id="adblockAlert" hidden>
@@ -62,14 +61,6 @@
         </div>
 
         @RenderBody()
-
-        @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
-        {
-            <div class="ads text-center">
-                <script type="text/javascript" src="//ylx-1.com/bnr.php?section=General&pub=852482&format=468x60&ga=g"></script>
-                <script type="text/javascript" src="//ylx-4.com/layer.php?section=General&pub=852482&ga=g&show=1&fp%22%3E"></script>
-            </div>
-        }
     </main>
     @Html.Partial("Footer")
 
