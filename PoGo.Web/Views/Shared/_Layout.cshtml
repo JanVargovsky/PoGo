@@ -1,5 +1,4 @@
-﻿@inject PoGo.Web.Logic.AdsFeed Ads
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head lang="cs" prefix="og: http://ogp.me/ns#">
     @{
@@ -43,30 +42,7 @@
 <body>
     @Html.Partial("Navigation")
     <main class="container body-content">
-        @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
-        {
-            <div class="ads ads-top text-center mb-1">
-                @foreach (var ad in Ads.Ads.Top)
-                {
-                    @Html.Raw(ad)
-                }
-            </div>
-        }
-        <div class="alert alert-danger" role="alert" id="adblockAlert" hidden>
-            Tento projekt žije díky příjmu z reklamy. Prosím, podpořte tento web a vypněte si Adblock.
-        </div>
-
         @RenderBody()
-
-        @if (ViewBag.HideAds == null || ViewBag.HideAds == false)
-        {
-            <div class="ads text-center">
-                @foreach (var ad in Ads.Ads.Bottom)
-                {
-                    @Html.Raw(ad)
-                }
-            </div>
-        }
     </main>
     @Html.Partial("Footer")
 
